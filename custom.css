@@ -1,5 +1,24 @@
+/*
+Colors:
+https://coolors.co/cdb4db-ffc8dd-ffafcc-bde0fe-a2d2ff
+*/
+[data-theme='sweet'] {
+   --color-primary: #FFAFCC;
+   --color-accent: #FF85B1;
+   --color-medium-blue: #BDE0FE;
+   --color-pink: #FFC8DD;
+   --color-purple: #C8ACD7;
+   --color-blue: #A2D2FF;
+   --color-light-blue: #D6EBFF;
+}
+
+body {
+   background: var(--color-light-blue)
+}
+
+/********** HERO **********/
 .hero-mesh {
-   background:  url("https://img.magnific.com/premium-photo/delicious-ice-cream-cones-blue-background_1153807-7454.jpg"); 
+   background: url("https://img.magnific.com/premium-photo/pastel-ice-cream-waffle-cones-bright-background-copy-space_144356-72241.jpg");
    background-position: center;
    background-size: cover;
 }
