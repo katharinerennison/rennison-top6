@@ -205,12 +205,14 @@ h1, h2, h3 { font-family: '______', system-ui, sans-serif; }
 
 /* The highlighter behind [your subject]. `clone` repeats it on every line when
  * the phrase wraps. */
+
 .hero-mark {
   background-image: linear-gradient(to top, color-mix(in oklch, var(--color-primary) 40%, transparent) 32%, transparent 32%);
   padding-inline: 0.15em;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
 }
+
 
 .hero-support {
   font-size: 1.125rem;
