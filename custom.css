@@ -48,3 +48,15 @@ body {
 .hero-cue {
    display: none;
 }
+h1, h2, h3, h4, h5, h6 {
+   font-family: "Sour Gummy", sans-serif;
+}
+
+.sour-gummy-<uniquifier> {
+  font-family: "Sour Gummy", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 112.5;
+}
