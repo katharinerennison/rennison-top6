@@ -24,14 +24,12 @@ body {
 }
 
 .hero-title {
-   color: var(#ffffff);
-   text-shadow: 2px 2px 10px --color-medium-blue;
+   color: #ffffff;
 }
 
 .hero-support {
    color: #ffffff;
    font-weight: 400;
-   text-shadow: 1px 1px 3px --color-light-blue
 }
 
 /******Navbar*****/
@@ -40,23 +38,75 @@ body {
 .site-nav-brand {
    color: var(--color-pink);
 }
+
 .is-nav-ready .site-nav.is-stuck {
-    background: #ffffff;
-    backdrop-filter: blur(10px);
+   background: #ffffff;
+   backdrop-filter: blur(10px);
 }
 
 .hero-cue {
    display: none;
 }
+
 h1, h2, h3, h4, h5, h6 {
-   font-family: "Sour Gummy", sans-serif;
+  font-family: "Sour Gummy", sans-serif;
 }
 
+/**copied from google fonts**/
 .sour-gummy-<uniquifier> {
-  font-family: "Sour Gummy", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
+   font-family: "Sour Gummy", sans-serif;
+   font-optical-sizing: auto;
+   font-weight: 500;
+   font-style: normal;
+   font-variation-settings: "wdth" 112.5;
+}
+
+body {
+  font-family: "Capriola", sans-serif;
+}
+.capriola-regular {
+  font-family: "Capriola", sans-serif;
+  font-weight: 400;
   font-style: normal;
-  font-variation-settings:
-    "wdth" 112.5;
+}
+
+
+
+
+
+/* FOOTER */
+
+.site-foot {
+   background: #eaf5ff;
+   border-top: 2px solid #d6ebff;
+}
+
+.site-foot-title {
+   color: #59415f;
+   font-family: "Sour Gummy", sans-serif;
+   font-size: 1.2rem;
+}
+
+.credits a:hover {
+   color: #d95791;
+}
+
+/* HOW I RANKED THEM */
+
+.method {
+  background: var(--color-);
+  border-top: 2px solid #f8d9e8;
+}
+
+.method-h {
+  color: var(--color-bright-pink);
+  font-family: "Sour Gummy", sans-serif;
+  font-size: 1.3rem;
+}
+
+.method-cols > div {
+  padding: 1.5rem;
+  border: 1px solid #f4cfe1;
+  border-radius: 1.25rem;
+  background: #fffafd;
 }
