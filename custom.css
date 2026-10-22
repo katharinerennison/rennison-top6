@@ -82,7 +82,7 @@ body {
 }
 
 .site-foot-title {
-   color: #59415f;
+   color: #396ea0;
    font-family: "Sour Gummy", sans-serif;
    font-size: 1.2rem;
 }
@@ -94,8 +94,7 @@ body {
 /* HOW I RANKED THEM */
 
 .method {
-  background: var(--color-);
-  border-top: 2px solid #f8d9e8;
+  background: var(--color-light-blue);
 }
 
 .method-h {
@@ -109,4 +108,63 @@ body {
   border: 1px solid #f4cfe1;
   border-radius: 1.25rem;
   background: #fffafd;
+}
+
+.entry-title::after {
+   content: " ✦";
+   color: var(--color-pink);
+   font-size: 0.75em;
+}
+.entry-one .entry-title::after {
+   color: #FFFFFF;
+   content: " ✧";
+}
+.rank {
+   top: 1rem;
+   right: 1rem;
+   line-height: 1;
+   border-radius: 999px;
+   background: var(--color-light-pink);
+   color: #396ea0;
+   box-shadow: 0 3px 8px #c8acd733;
+   font-size: 1.1rem;
+   padding: 0.7rem 1rem;
+}
+
+.entry-card {
+   border-radius: 1.25rem;
+   box-shadow: 0 8px 22px #c8acd733;
+}
+
+.entry-card:hover,
+.entry-card:focus-within {
+   box-shadow: 0 12px 28px #9d80b455;
+}
+.entry-one .entry-card,
+.entry-one .entry-card * {
+    color: #FFFFFF;
+}
+.entry-one .rank {
+   background: var(--color-light-blue);
+   color: #396ea0
+}
+.entry-one .entry-card:hover .rank {
+  color: #396ea0;
+}
+
+/* BLUE SECTION TITLES*/
+.section-title {
+  color: #396ea0;
+}
+.section-support {
+  color: #396ea0;
+}
+/* ICE CREAM CARD TEXT — EXCEPT MITCHELL'S */
+.entry-card:not(.entry-one .entry-card) {
+  color: #39566f;
+}
+
+.entry-card:not(.entry-one .entry-card) p,
+.entry-card:not(.entry-one .entry-card) .entry-note {
+  color: #39566f;
 }
