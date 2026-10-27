@@ -1,170 +1,308 @@
-/*
-Colors:
-https://coolors.co/cdb4db-ffc8dd-ffafcc-bde0fe-a2d2ff
-*/
-[data-theme='sweet'] {
-   --color-bright-pink: #FFAFCC;
-   --color-pink: #FF85B1;
-   --color-medium-blue: #BDE0FE;
-   --color-light-pink: #FFC8DD;
-   --color-purple: #C8ACD7;
-   --color-primary: #A2D2FF;
-   --color-light-blue: #D6EBFF;
+/* =========================================
+   THE SCOOP ON CLE — CUSTOM STYLES
+   Theme: pastel ice cream shop
+========================================= */
+
+/* COLORS */
+[data-theme="sweet"] {
+  --color-bright-pink: #FFAFCC;
+  --color-pink: #FF85B1;
+  --color-medium-blue: #BDE0FE;
+  --color-light-pink: #FFC8DD;
+  --color-purple: #C8ACD7;
+  --color-primary: #A2D2FF;
+  --color-light-blue: #D6EBFF;
+
+  --scoop-blue: #396EA0;
+  --scoop-text: #39566F;
+  --scoop-white: #FFFFFF;
 }
 
+/* GENERAL */
 body {
-   background: var(--color-light-blue);
+  font-family: "Capriola", sans-serif;
+  background: var(--color-light-blue);
 }
 
-/********** HERO **********/
-.hero-mesh {
-   background: url("https://img.magnific.com/premium-photo/pastel-ice-cream-waffle-cones-bright-background-copy-space_144356-72241.jpg");
-   background-position: center;
-   background-size: cover;
-}
-
-.hero-title {
-   color: #ffffff;
-}
-
-.hero-support {
-   color: #ffffff;
-   font-weight: 400;
-}
-
-/******Navbar*****/
-/******Navbar*****/
-/******Navbar*****/
-.site-nav-brand {
-   color: var(--color-pink);
-}
-
-.is-nav-ready .site-nav.is-stuck {
-   background: #ffffff;
-   backdrop-filter: blur(10px);
-}
-
-.hero-cue {
-   display: none;
-}
-
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Sour Gummy", sans-serif;
 }
 
-/**copied from google fonts**/
-.sour-gummy-<uniquifier> {
-   font-family: "Sour Gummy", sans-serif;
-   font-optical-sizing: auto;
-   font-weight: 500;
-   font-style: normal;
-   font-variation-settings: "wdth" 112.5;
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.site-nav,
+.site-nav a,
+.site-nav button {
+  font-family: "Sour Gummy", sans-serif;
 }
 
-body {
-  font-family: "Capriola", sans-serif;
-}
-.capriola-regular {
-  font-family: "Capriola", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+.site-nav-brand {
+  color: var(--color-pink);
+  font-weight: 800;
+  transition: color 0.3s ease;
 }
 
-
-
-
-
-/* FOOTER */
-
-.site-foot {
-   background: #eaf5ff;
-   border-top: 2px solid #d6ebff;
+/* White branding over the hero image */
+.is-nav-ready .site-nav:not(.is-stuck) .site-nav-brand {
+  color: #FFFFFF;
 }
 
-.site-foot-title {
-   color: #396ea0;
-   font-family: "Sour Gummy", sans-serif;
-   font-size: 1.2rem;
+/* Pink branding once the navbar sticks */
+.is-nav-ready .site-nav.is-stuck .site-nav-brand {
+  color: var(--color-pink);
 }
 
-.credits a:hover {
-   color: #d95791;
+.is-nav-ready .site-nav.is-stuck {
+  background: rgb(255 255 255 / 92%);
+  backdrop-filter: blur(10px);
 }
 
-/* HOW I RANKED THEM */
+/* Hide the scroll indicator */
+.hero-cue {
+  display: none;
+}
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero-mesh {
+  background-image: url("https://img.magnific.com/premium-photo/pastel-ice-cream-waffle-cones-bright-background-copy-space_144356-72241.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.hero-title {
+  color: #FFFFFF;
+  text-wrap: balance;
+}
+
+.hero-support {
+  max-width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =========================================
+   SECTION HEADINGS
+========================================= */
+
+.section-title {
+  color: var(--scoop-blue);
+}
+
+.section-support {
+  color: var(--scoop-blue);
+  line-height: 1.8;
+}
+
+.entry-title::after {
+  content: " ✦";
+  color: var(--color-pink);
+  font-size: 0.75em;
+}
+
+/* =========================================
+   RANKING CARDS
+========================================= */
+
+.entry-card {
+  border-radius: 1.25rem;
+  box-shadow: 0 8px 22px rgb(200 172 215 / 20%);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.entry-card:hover,
+.entry-card:focus-within {
+  box-shadow: 0 14px 30px rgb(157 128 180 / 30%);
+}
+
+/* Consistent text colors on cards 2–6 */
+.entry:not(.entry-one) .entry-card {
+  color: var(--scoop-text);
+}
+
+.entry:not(.entry-one) .entry-note {
+  color: var(--scoop-text);
+}
+
+/* =========================================
+   RANKING NUMBERS
+========================================= */
+
+/* Normal state: small pastel badge */
+.rank {
+  top: 1rem;
+  right: 1rem;
+
+  display: inline-block;
+  padding: 0.65rem 0.9rem;
+
+  border-radius: 999px;
+  background: var(--color-light-pink);
+  color: var(--scoop-blue);
+
+  font-family: "Sour Gummy", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 800;
+  line-height: 1;
+
+  box-shadow: 0 3px 8px rgb(200 172 215 / 20%);
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    font-size 0.3s ease,
+    padding 0.3s ease;
+}
+
+/* Hover: badge expands into a large number */
+.entry:not(.entry-one) .entry-card:hover .rank,
+.entry:not(.entry-one) .entry-card:focus-within .rank {
+  padding: 0;
+
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
+
+  color: var(--color-pink);
+  font-size: 4rem;
+
+  transform: scale(1.08);
+}
+
+/* =========================================
+   MITCHELL'S — NUMBER ONE
+========================================= */
+
+.entry-one .entry-card {
+  background: var(--color-primary);
+  border: none;
+}
+
+/* White text throughout the winning card */
+.entry-one .entry-card,
+.entry-one .entry-card * {
+  color: #FFFFFF;
+}
+
+/* White star */
+.entry-one .entry-title::after {
+  content: " ✧";
+  color: #FFFFFF;
+}
+
+/* Blue number on the blue card */
+.entry-one .rank {
+  background: var(--color-light-blue);
+  color: var(--scoop-blue);
+}
+
+/* Keep the number blue even on hover */
+.entry-one .entry-card:hover .rank,
+.entry-one .entry-card:focus-within .rank {
+  background: var(--color-light-blue);
+  color: var(--scoop-blue);
+}
+
+/* =========================================
+   HOW I RANKED THEM
+========================================= */
 
 .method {
   background: var(--color-light-blue);
+  border-top: none;
 }
 
 .method-h {
   color: var(--color-bright-pink);
   font-family: "Sour Gummy", sans-serif;
   font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
 }
 
 .method-cols > div {
   padding: 1.5rem;
-  border: 1px solid #f4cfe1;
+  border: 1px solid var(--color-light-pink);
   border-radius: 1.25rem;
-  background: #fffafd;
+  background: #FFFAFD;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
-.entry-title::after {
-   content: " ✦";
-   color: var(--color-pink);
-   font-size: 0.75em;
-}
-.entry-one .entry-title::after {
-   color: #FFFFFF;
-   content: " ✧";
-}
-.rank {
-   top: 1rem;
-   right: 1rem;
-   line-height: 1;
-   border-radius: 999px;
-   background: var(--color-light-pink);
-   color: #396ea0;
-   box-shadow: 0 3px 8px #c8acd733;
-   font-size: 1.1rem;
-   padding: 0.7rem 1rem;
+.method-cols > div:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgb(200 172 215 / 20%);
 }
 
-.entry-card {
-   border-radius: 1.25rem;
-   box-shadow: 0 8px 22px #c8acd733;
+/* =========================================
+   CAROUSEL
+========================================= */
+
+#slider {
+  max-width: 64rem;
+  padding: 0 1rem;
 }
 
-.entry-card:hover,
-.entry-card:focus-within {
-   box-shadow: 0 12px 28px #9d80b455;
-}
-.entry-one .entry-card,
-.entry-one .entry-card * {
-    color: #FFFFFF;
-}
-.entry-one .rank {
-   background: var(--color-light-blue);
-   color: #396ea0
-}
-.entry-one .entry-card:hover .rank {
-  color: #396ea0;
+#slider .carousel {
+  overflow: hidden;
+  border: 4px solid #FFFFFF;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 28px rgb(57 110 160 / 15%);
 }
 
-/* BLUE SECTION TITLES*/
-.section-title {
-  color: #396ea0;
-}
-.section-support {
-  color: #396ea0;
-}
-/* ICE CREAM CARD TEXT — EXCEPT MITCHELL'S */
-.entry-card:not(.entry-one .entry-card) {
-  color: #39566f;
+#slider img {
+  object-fit: cover;
 }
 
-.entry-card:not(.entry-one .entry-card) p,
-.entry-card:not(.entry-one .entry-card) .entry-note {
-  color: #39566f;
+/* =========================================
+   FOOTER
+========================================= */
+
+.site-foot {
+  background: #EAF5FF;
+  border-top: 2px solid var(--color-medium-blue);
+}
+
+.site-foot-title {
+  color: var(--scoop-blue);
+  font-family: "Sour Gummy", sans-serif;
+  font-size: 1.2rem;
+}
+
+.site-foot .section-support {
+  color: var(--scoop-blue);
+}
+
+.credits a:hover {
+  color: #D95791;
+}
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .rank,
+  .method-cols > div {
+    transition: none;
+  }
+
+  .method-cols > div:hover {
+    transform: none;
+  }
 }
